@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peroxisomas</title>
+    <link rel="StyleSheet" href="estilos.css" type="text/css"/>
+    <link rel="shortcut icon" href="fotologo.jpg" type="image/x-icon" />
+    <!--scrip type="text/JavaScript" src="javaScript.js"></script-->
+    <script>
+        /** @type {HTMLElement}*/
+        var posElt;
+        /** @type {HTMLElement} */
+        var posLinkElt;
+
+
+        window.addEventListener('load', function(){
+            posElt = document.getElementById('Pos');
+            posLinkElt = document.querySelector('#PosLink > a');
+
+            // if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(geoposOK, geoposKO);
+            // }
+            // else {
+            // }
+        });
+
+        /** @param {GeolocationPosition} pos */
+        function geoposOK(pos) {
+            //Obtenemos latitud y longitud
+            var lat = pos.coords.latitude;
+            var long = pos.coords.longitude;
+            //Mostramos la posición
+            posElt.textContent = `${lat}, ${long}`;
+            //generamos enlace a la posición
+            posLinkElt.href = `https://maps.google.com/?q=${lat},${long}`;
+            posLinkElt.textContent = 'Mostrar tu posición en un mapa';
+        }
+
+        /** @param {GeolocationPositionError} err */
+        function geoposKO(err) {
+            console.warn(err.message);
+            let msg;
+            switch(err.code) {
+                case err.PERMISSION_DENIED:
+                    msg = "No nos has dado permiso para obtener tu posición";
+                    break;
+                case err.POSITION_UNAVAILABLE:
+                    msg = "Tu posición actual no está disponible";
+                    break;
+                 case err.TIMEOUT:
+                     msg = "No se ha podido obtener tu posición en un tiempo prudencial";
+                     break;
+                 default:
+                     msg = "Error desconocido";
+                     break;
+            }
+            posElt.textContent = msg;
+        }
+        
+
+    </script>
+
+</head>
+<body>
+
+<section id="boton"><input type="button" value="Haga click para conocer la web" name="boton1"
+onclick="alert('Esta página web está hecha con un fin educativo, desde el IES Lucía de Medrano. También se puede acceder a 2 webs conectadas mediante enlaces: la célula y los lisosomas.')"><br>
+</section><br>
+
+ <section id="indices">
+        <div><a href="#indice">Índice de contenidos</a></div>   <br> <br>
+        <div><a href="#celula">Sobre la célula</a></div><br> <br> 
+        <div><a href="#biogenesis">Biogénesis</a></div><br> <br> 
+        <div><a href="#funciones">Funciones</a></div> <br> <br> 
+        <div><a href="#bibliografía">Bibliografía</a></div><br> <br> 
+        <div><a href="#otros">Otras páginas de interés</a></div><br> <br> 
+    </section>
+    <br> <br>
+<div><header><h3>Los peroxisomas: orgánulos celulares</h3>
+    En esta web vamos a tratar con detenimiento la composición, formación y funciones de los peroxisomas en <br>
+     las células.<br>
+    <section id="imgp1"> <img src="peroxisoma1.jpg" width="500" height="400"></section>
+    </header></div>
+<div><nav><h1 id="indice"><align center>ÍNDICE</align></h1>
+<ul type="square"><li><a href="#biogenesis">Biogénesis</a></li><br><br>
+<li><a href="#funciones">Funciones</a></li></ul><br>
+</nav></div>
+
+
+
+
+
+<section><h2 id="biogenesis"></h2><strong>Biogénesis</strong></h2></section>
+<br><br>
+    <article><p><align justify>Los peroxisomas son orgánulos con una gran plasticidad, pueden incrementar su número y tamaño 
+        frente a estímulos fisiológicos y volver a su número normal cuando el estímulo ha desaparecido, así 
+        como cambiar su repertorio de enzimas. Los peroxisomas, cuando están libres en el citosol, incorporan 
+        proteínas que se sintetizan en los ribosomas citosólicos. Al contrario que otros orgánulos, donde las proteínas se deben incorporar de manera desplegada,
+        en los peroxisomas, éstas pueden entrar plegadas, incluso agregadas. La incorporación de estas moléculas 
+        desde el citosol hace que los peroxisomas maduren y crezcan.</align><br></p>
+
+        <p>La biogénesis o formación de nuevos peroxisomas en una célula se puede producir de dos formas:
+        <ul type="square"><align justify><dd><li>Los peroxisomas de una celula crecen y se dividen por
+            estrangulamiento. La maquinaria de fisión de los peroxisomas tienen muchas semejanzas con la de división de 
+            mitocondrias y cloroplastos,a pesar de sus diferentes orígenes evolutivos. El proceso de
+            división de un peroxisomas empieza cuando sus membranas entran en contacto con las del 
+            retículo endoplasmático. Este contacto permite el traspaso de lípidos de membrana hacia el
+            peroxisoma y por tanto el incremento de la superficie de membrana.Mediante estrangulamiento del peroxisoma en crecimiento se producen dos nuevos que irán madurando <br>
+            contenido proteico a medida que van incorporando proteínas desde el citosol.</li></align></dd><br>
+
+       <dd><li>Las células son capaces de generar peroxisomas desde cero, es decir, cuando se eliminan
+            todos los peroxisomas de una célula, ésta es capaz de generar peroxisomas nuevos y funcionales. A 
+            este proceso contribuyen vesiculas provenientes desde el retículo endoplasmático (tienen peroxina 16)
+            y desde la mitocondrias (tienen peroxinas 3 y 14) en las células de mamíferos (en levaduras todas 
+            las vesículas provienen del retículo endoplasmático). La
+            sola presencia de estas proteínas en una membrana hace que se empequeten en vesículas y se
+            envíen al citosol para formar los pre-peroxisomas.</dd></li></ul></p>
+
+        <p>Existen proteínas, como las pex30, que aparecen en las regiones del retículo endoplasmático donde se van a formar las gotas de grasa. Curiosamente estas proteínas también aparecen en aquellas regiones donde se forman los peroxisomas. Así, parece que los mecanismos de formación de nuevos peroxisomas y nuevas gotas de grasa pueden ser compartidos.
+
+        
+
+    Este proceso se produce por estrés celular o anoxia. Se forma un autofagosoma que se fusiona con el peroxisoma y lo degrada.
+    <section id="imgp2"> <img src="peroxisoma2.jpg" width="600" height="400"></section>
+
+</p></article>
+
+
+
+
+<div><section><h2 id="funciones"></h2><strong>Funciones</strong></h2></section></div><br><br>
+    <div><article><p>Los peroxisomas deben su nombre a que las primeras enzimas que se descubrieron en su interior fueron las peroxidasas, aunque pueden contener más de 50 enzimas diferentes. Los tipos de enzimas presentes y su concentración varían dependiendo del tipo celular y del estado fisiológico de la célula. Los peroxisomas participan en una variedad sorprendente de reacciones metabólicas.
+
+        Los peroxisomas llevan a cabo dos procesos metabolicos importantes: metabolismo de lípidos y protección celular frente a peróxidos y moléculas oxidativas perjudiciales. En los mamíferos degradan lípidos de cadenas muy largas, lípidos ramificados, D-aminoácidos, poliaminas, y participan en la biosíntesis de plasmalógenos y ciertos precursores del colesterol. En algunas levaduras favorecen al asimilación del acohol. Dos enzimas son típicas de este orgánulo: la catalasa y la urato oxidasa. La catalasa está especializada en la eliminación del peróxido de hidrógeno (H2O2), que resulta de procesos oxidativos. Las reacciones de oxidación siguen el patrón siguiente:
+        
+        RH2 +O2 → R + H2O2
+        El peróxido de hidrógeno es una molécula altamente reactiva y por tanto muy tóxica. La catalasa permite su inactivación mediante la siguiente reacción:
+        
+        H2O2 + R-H2 → R+ 2H2O
+        Los peroxisomas suelen llevar a cabo numerosas y variadas funciones metabólicas, normalmente en cooperación con otros orgánulos celulares. En conjunto, a los diferentes tipos o especializaciones de los peroxisomas se les llama microcuerpos.
+        
+        Recientemente se ha propuesto que los peroxisomas funcionan como plataformas de señalización en las células de los mamíferos.</p>
+        <br><section id="video"><iframe width="800" height="444" src="https://www.youtube.com/embed/ncjy8YkfLhM" title="PEROXISOMAS - Funciones y estructura 😀" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
+    
+    </div>    <br><br><article>
+
+
+
+<div><aside><h3 id="celula"></h3><strong>La célula</strong></h3>
+    
+    <p>Toda célula, procariota o eucariota, es un conjunto de moléculas complejo y altamente organizado.<br>
+     De hecho, poseen numerosos compartimentos con funciones definidas. Vamos a considerar a un compartimento     celular como un espacio, delimitado o no por membrana, donde se lleva a cabo una actividad necesaria o<br>
+       importante para la célula. Uno de los compartimentos presentes en todas las células es la membrana <br>
+       plasmática o plasmalema, que engloba a todos los demás compartimentos celulares y permite delimitar el espacio celular interno del externo.<br>
+       <a href="index3.html"><img src="celula.jpg" width="285" height="250"></a><strong>Haga click en la imagen para dirigirse a otra página web con más información acerca de la célula.</strong></p>
+    
+ </aside></div>
+
+<div><section id="widget">
+
+       <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+       <div class="elfsight-app-54832719-95be-401e-804b-b5a94891f00c" data-elfsight-app-lazy></div>
+    </section></div>
+
+
+<div><footer><h1 id="bibliografía"><strong>Referencias</strong></h1>
+    <ul type="square"><li><a href="https://mmegias.webs.uvigo.es/5-celulas/6-peroxisomas.php" target="_blank"> Universidad de Vigo </a></li>
+        <br><br><li><a href="https://metabolicas.sjdhospitalbarcelona.org/ecm/biogenesis-peroxisoma/info/es-peroxisoma" target="_blank"> Guía Metabólica </a></li>
+   
+        
+   
+   
+   
+   
+   <br>
+   Imágenes:
+    <ul type="square"><li><a href="https://upload.wikimedia.org/wikipedia/commons/8/82/Peroxisome.jpg" target="_blank">Imagen de un peroxisoma (Wikipedia)</a>
+    </li><br>
+    <li>
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AC%25C3%2589LULA_BIOLOG%25C3%258DA_Naya.JPG&psig=AOvVaw2fN4sULPvg-MyJvZSubNgG&ust=1704881713208000&source=images&cd=vfe&opi=89978449&ved=0CBEQjhxqFwoTCOD5wbmJ0IMDFQAAAAAdAAAAABAD" target="_blank">Imagen de una célula (Wikimedia commons)</a>
+
+    </li><br>
+    <li>
+        <a href="https://www.xataka.com/medicina-y-salud/como-funciona-sistema-inmunitario-frente-al-covid-tenemos-clave-para-entender-que-inmunidad-va-mucho-alla-anticuerpos" target="_blank">Imagen de la exocitosis (Xataka)</a>
+
+    </li>
+   <h1 id="otros"><strong>Otras páginas relacionadas</strong></h1>
+    <ul type="square"><a href="index2.html">Otros orgnánulos celulares: los lisosomas</a>
+    <p>Tu posición es: <span id="Pos">Desconocida</span></p>
+    <p id="PosLink"><a target="_blank"></a></p>
+    <a href="#indices">Volver arriba</a>
+    <br>
+    <section id="cc"><img src="cc.png" width="100" height="100"></section></footer>
+</div>
+
+</body>
+</html>

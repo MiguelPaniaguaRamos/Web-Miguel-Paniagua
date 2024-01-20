@@ -1,0 +1,154 @@
+
+#imgp2{
+  text-align: center;
+  background-color:rgb(70, 165, 121);
+}
+div a{
+  color:rgb(0, 0, 0);
+  display: block;
+  border-style:inset;
+  text-align: center;
+  margin-right:0px;
+}
+#boton{
+  color:rgb(180, 228, 204);
+  font-size: 20px;
+  padding:10px;
+  margin-right:320px;
+  padding: 5px;
+  text-align: center;
+
+}
+ul{
+  list-style:square;
+}
+#indice{
+  text-align:center;
+  font-size: 20px;
+  padding:10px;
+  margin-right:0px;
+  padding: 5px;
+ 
+
+}
+#indices{
+  text-align:center;
+  font-size: 20px;
+  padding:10px;
+  margin-right:320px;
+  padding: 5px;
+ 
+
+}
+#imgp1{
+  text-align: center;
+}
+
+  div header{
+    background-color:rgb(180, 228, 204);
+    margin-right:320px;
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-color:rgb(0, 0, 0);
+    border-width: 2px;
+    border-radius: 10px;
+    text-align: justify;
+    align-items: center
+  }
+  
+  nav{
+    background-color:rgb(106, 138, 122);
+    margin-right:0px;
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  section{
+    background-color:rgb(180, 228, 204);
+    text-align:center;
+    font-size:50px;
+    margin-right:0px;
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    text-align: justify;
+  }
+  
+  div section{
+    text-align:center;
+    font-size:50px;
+    background-color:rgb(180, 228, 204);
+    margin-right:0px;
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    text-align: justify;
+  }
+#video{
+  text-align:center;
+}
+  article{
+    margin-right:0px;
+    background-color:rgb(136, 221, 178);
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    text-align: justify;
+    padding:10px;
+  }
+  div article{
+    margin-right:0px;
+    background-color:rgb(136, 221, 178);
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    text-align: justify;
+
+  }
+#widget{
+  position: absolute;
+  left:920px;
+  right:20px;
+  top:800px;
+  bottom:-80px;
+  padding: 10px;
+  background-color:rgb(255, 255, 255);
+  border-style: dashed;
+  border-radius: 8px;
+  color:rgb(0, 0, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+}
+  div aside{
+    position: absolute;
+    left:900px;
+    right:0px;
+    top:10px;
+    bottom:-100px;
+    padding: 10px;
+    background-color:rgb(129, 158, 143);
+    border-style: dashed;
+    border-radius: 8px;
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+  }
+
+  footer{
+    background-color:rgb(180, 228, 204);
+    color:rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    margin-right:0px;
+    padding:10px;
+    margin-top:0px;
+    
+  }
+  a:hover{
+    color: rgb(0, 255, 13);
+  }
+  #cc{
+    text-align: right;
+}
